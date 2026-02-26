@@ -1,0 +1,63 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo .brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #2d3436;
+}
+
+.logo .highlight {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #007bff;
+}
+
+.header-title {
+  text-align: center;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2d3436;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header-title p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #636e72;
+  font-style: italic;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #2d3436;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+.contact-btn {
+  background: #007bff;
+  color: white !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}

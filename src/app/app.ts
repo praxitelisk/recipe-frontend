@@ -1,12 +1,34 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { IngredientService } from './ingredient.service'; // Βεβαιώσου ότι το όνομα αρχείου είναι σωστό
+import {Footer} from './components/footer/footer';
+import {Header} from './components/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule, Footer, Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('recipe-frontend');
+export class App implements OnInit { // Το αφήνουμε 'App' όπως το έχεις
+  
+  // Εδώ ορίζουμε τη λίστα που ψάχνει το HTML
+  ingredients = signal<any[]>([]); // Ορισμός ως signal 
+
+  // Κάνουμε inject το service
+  constructor(private service: IngredientService) {}
+
+  ngOnInit() {
+    // Καλούμε τη Java μόλις ξεκινήσει η εφαρμογή
+    this.service.getIngredients().subscribe({
+      next: (data) => {
+        this.ingredients.set(data); // Ενημέρωση του signal
+        console.log('Ήρθαν τα δεδομένα:', data);
+      },
+      error: (err) => {
+        console.error('Κάτι πήγε λάθος στη σύνδεση με τη Java:', err);
+      }
+    });
+  }
 }
