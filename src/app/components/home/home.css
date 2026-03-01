@@ -1,0 +1,42 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  min-height: 80vh;
+  background: radial-gradient(circle at top right, #f0f7ff, #ffffff);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge {
+  background: #e1f0ff;
+  color: #007bff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.2; margin: 20px 0; color: #2d3436; }
+p { font-size: 1.2rem; color: #636e72; max-width: 500px; margin-bottom: 40px; }
+
+.hero-actions { display: flex; gap: 20px; }
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.stats { display: flex; gap: 40px; margin-top: 60px; border-top: 1px solid #eee; padding-top: 30px; }
+.stat-item strong { display: block; font-size: 1.5rem; color: #2d3436; }
+.stat-item span { color: #b2bec3; font-size: 0.9rem; }

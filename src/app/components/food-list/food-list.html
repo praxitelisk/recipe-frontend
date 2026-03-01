@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Όνομα</th>
+      <th>Κατηγορία</th> 
+      <th>Θερμίδες</th>
+      <th>Τιμή (€)</th> 
+      <th>Μονάδα</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ingredient of ingredients()">
+      <td>{{ ingredient.id }}</td>
+      <td>{{ ingredient.name }}</td>
+      <td>{{ ingredient.category }}</td>
+      <td>{{ ingredient.caloriesPer100g }}</td> 
+      <td>{{ ingredient.price }}</td>
+      <td>{{ ingredient.unit }}</td>
+    </tr>
+  </tbody>
+</table>

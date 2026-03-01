@@ -7,9 +7,20 @@
     <h1>Κατάλογος Τροφίμων & Θερμίδων</h1>
   </div>
 
+ 
   <nav>
-    <a href="#">Αρχική</a>
-    <a href="#">Πίνακας</a>
-    <a href="#" class="contact-btn">Επικοινωνία</a>
-  </nav>
+  <a routerLink="/" 
+     class="nav-link" 
+     routerLinkActive="active-link" 
+     [routerLinkActiveOptions]="{exact: true}">Αρχική</a>
+     
+  <a routerLink="/catalog" 
+     class="nav-link" 
+     routerLinkActive="active-link">Πίνακας</a>
+
+     
+  <a routerLink="/contact"
+    class="nav-link" 
+     routerLinkActive="active-link">Επικοινωνία</a>
+</nav>
 </header>

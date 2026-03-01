@@ -61,3 +61,29 @@ nav a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
 }
+
+/* Το highlight για τα απλά links (π.χ. Αρχική) */
+.nav-link.active-link {
+    color: #007bff !important; /* Έντονο μπλε */
+    font-weight: 600;
+    position: relative;
+}
+
+/* Η γραμμή κάτω από την "Αρχική" όταν είναι ενεργή */
+.nav-link.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+}
+
+/* Το highlight για το κουμπί "Πίνακας" */
+.contact-btn.active-link {
+    background-color: #0056b3 !important; /* Πιο σκούρο μπλε */
+    color: white !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} 

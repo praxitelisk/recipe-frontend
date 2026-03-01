@@ -1,3 +1,22 @@
+/* 1. Εξασφαλίζουμε ότι το html και το body πιάνουν όλο το ύψος */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* 2. Φτιάχνουμε το container της εφαρμογής (στο app.html) */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% του ύψους της οθόνης */
+}
+
+/* 3. Το main (router-outlet) θα "ρουφάει" όλο τον κενό χώρο */
+main {
+    flex: 1;
+    padding: 40px 20px; /* Πάνω-κάτω και δεξιά-αριστερά */
+}
+
 .container {
   padding: 20px;
   font-family: Arial, sans-serif;

@@ -1,22 +1,14 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IngredientService } from './ingredient.service'; // Βεβαιώσου ότι το όνομα αρχείου είναι σωστό
-import { RouterOutlet, RouterLink } from '@angular/router';
-
-import {Footer} from './components/footer/footer';
-import {Header} from './components/header/header';
-import {Home} from './components/home/home'
-import { FoodList } from './components/food-list/food-list';
+import { IngredientService } from '../../ingredient.service';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, Footer, Header, Home, FoodList, RouterOutlet, RouterLink],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  selector: 'app-food-list',
+  imports: [CommonModule],
+  templateUrl: './food-list.html',
+  styleUrl: './food-list.css',
 })
-export class App implements OnInit { // Το αφήνουμε 'App' όπως το έχεις
-  
+export class FoodList implements OnInit {
   // Εδώ ορίζουμε τη λίστα που ψάχνει το HTML
   ingredients = signal<any[]>([]); // Ορισμός ως signal 
 
